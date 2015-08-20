@@ -27,7 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #Includes Gem for Pagination
 gem 'will_paginate', '>3.0'
-
+#Include simpleform gem
+gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
