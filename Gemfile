@@ -34,6 +34,10 @@ gem 'will_paginate', '>3.0'
 gem 'simple_form'
 #devise gem
 gem 'devise', '>= 3.2.4'
+#Geocoder for maps
+gem 'geocoder'
+#figaro
+gem 'figaro', '>= 1.0.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
