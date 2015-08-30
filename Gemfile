@@ -42,8 +42,7 @@ gem 'figaro', '>= 1.0.0'
 #CarrierWave
 gem 'carrierwave'
 
-#rmagick for CarrierWave
-gem 'rmagick'
+gem "fog", "~> 1.3.1"
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server

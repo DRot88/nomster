@@ -120,7 +120,7 @@
 <h1 class="pull-left">Photos</h1>
   <div class="clear">
   <% @place.photos.each do |photo| %>
-    <div class="booyah-box col-xs-12 col-xs-6">
+    <div class="booyah-box">
         <%= image_tag photo.picture %>
         <%= photo.caption %>
     </div>
