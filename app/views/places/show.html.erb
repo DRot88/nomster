@@ -34,8 +34,12 @@
 
 	<div class="pull-right">
 		<% if current_user && current_user == @place.user %>
+      <!-- Button trigger modal -->
+      <button class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
+        Add Photos
+      </button>
 			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
-		<%= link_to 'Destroy', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-primary' %>
+		  <%= link_to 'Destroy', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-primary' %>
 		<% end %>
 	</div>
 </div>
@@ -94,14 +98,10 @@
     </div>
   </div>
 </div>
-
+<br />
 <div class="col-xs-10 col-xs-offset-1">
-  <h1 class="pull-left">Photos</h1>
-  <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myPhotoModal">
-    Add Photos
-  </button>
-</div>
+
+
 <div class="clear"></div>
 
 <% @place.comments.each do |comment| %>
@@ -115,10 +115,13 @@
     </blockquote>
   </div>
 <% end %>
+<div class="clear">
 
-<% @place.photos.each do |photo| %>
-  <div class="booyah-box col-xs-12 col-xs-offset-1">
-    <%= image_tag photo.picture %>
-    <%= photo.caption %>
-  </div>
-<% end %>
+<h1 class="pull-left">Photos</h1>
+  <div class="clear">
+  <% @place.photos.each do |photo| %>
+    <div class="booyah-box col-xs-12 col-xs-6">
+        <%= image_tag photo.picture %>
+        <%= photo.caption %>
+    </div>
+  <% end %>

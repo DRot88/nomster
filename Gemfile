@@ -41,6 +41,9 @@ gem 'figaro', '>= 1.0.0'
 # Use ActiveModel has_secure_password
 #CarrierWave
 gem 'carrierwave'
+
+#rmagick for CarrierWave
+gem 'rmagick'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
