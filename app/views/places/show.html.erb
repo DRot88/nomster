@@ -117,13 +117,8 @@
 <% end %>
 
 <% @place.photos.each do |photo| %>
-  <div class="booyah-box col-xs-offset-1">
-    <blockquote>
-      <% if places.photo.present? %>
-        <b><%= places.photo %></b> -
-      <% end %>
-      <%= photo.caption %>
-      <smalL><%= photo.user.email %></small>
-    </blockquote>
+  <div class="booyah-box col-xs-12 col-xs-offset-1">
+    <%= image_tag photo.picture %>
+    <%= photo.caption %>
   </div>
 <% end %>
