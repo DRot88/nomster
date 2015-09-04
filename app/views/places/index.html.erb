@@ -63,7 +63,7 @@
 
 		<% if place.photos.present? %>
 			<div class="col-xs-10 col-xs-offset-1">
-        <%= link_to place.photos.last.picture.to_s, :class => 'fancybox' do %>
+        <%= link_to place.photos.last.picture.url, :class => 'fancybox' do %>
 				  <%= image_tag place.photos.last.picture, :class => 'fancybox img-responsive' %>
         <% end %>
 				<blockquote><p><%= place.photos.last.caption %></p></blockquote>
