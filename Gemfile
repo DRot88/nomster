@@ -46,6 +46,9 @@ gem 'carrierwave'
 
 gem "fog"
 
+#factory_girl for testing assistance
+gem "factory_girl_rails", "~> 4.0"
+
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
