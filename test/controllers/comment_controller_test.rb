@@ -9,7 +9,7 @@ class CommentControllerTest < ActionController::TestCase
     comment = FactoryGirl.create(:comment)
 
     assert_difference 'Comment.count' do
-      post :create, comment
+      post :create, comment => :comment
     end
   
     assert_equal 1, 'Comment.count'
