@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CommentControllerTest < ActionController::TestCase
+class CommentsControllerTest < ActionController::TestCase
   test "comment creation" do
     user = FactoryGirl.create(:user)
     sign_in user
@@ -8,11 +8,11 @@ class CommentControllerTest < ActionController::TestCase
     place = FactoryGirl.create(:place)
     comment = FactoryGirl.create(:comment)
 
-    assert_difference 'Comment.count' do
-      post :create, comment => :comment
-    end
-  
-    assert_equal 1, 'Comment.count'
+      post :create, :place_id => place.id, :comment => {
+        :message => comment.message,
+        :rating => comment.rating
+      }
+
     assert_redirected_to place_path(place)
   end
 end
